@@ -1,22 +1,19 @@
-/* --- Global / Dark Theme Styles for Videos Page --- */
-body.dark-theme {
-  background-color: #121212;
-  color: #e0e0e0;
-  margin: 0;
-  font-family: Arial, sans-serif;
+/* --- Video Section Specific Styles --- */
+
+/* Ensure the featured video looks good */
+.featured-video {
+  margin: 20px auto;
+  text-align: center;
+}
+.featured-video iframe {
+  width: 80%;
+  max-width: 640px;
+  height: 360px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
 }
 
-.container {
-  background-color: #121212;
-  color: #e0e0e0;
-  min-height: 100vh;
-  padding: 0 20px;
-}
-
-/* --- Header & Footer --- */
-/* (Assuming your main page CSS defines these; adjust if necessary) */
-
-/* --- Video Grid Styling --- */
+/* Video Grid */
 #video-list {
   display: flex;
   flex-wrap: wrap;
@@ -32,7 +29,7 @@ body.dark-theme {
   color: #fff;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
   transition: transform 0.2s ease-in-out;
 }
 .video:hover {
@@ -50,7 +47,3 @@ body.dark-theme {
   font-weight: bold;
   text-align: center;
 }
-
-/* --- Logo & Header Adjustments --- */
-/* Ensure that your logo, header text, and spacing match your main page design. */
-/* If you have additional header styles in your main CSS, replicate them here if needed. */
