@@ -1,6 +1,17 @@
-/* --- Video Section Specific Styles --- */
+/* Ensure dark mode background and text if not set in the main CSS */
+body.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
 
-/* Ensure the featured video looks good */
+/* Override or extend container styles if necessary */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* If your main site uses different padding/margins, adjust accordingly */
+}
+
+/* Featured Video (optional) */
 .featured-video {
   margin: 20px auto;
   text-align: center;
@@ -13,7 +24,7 @@
   box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
 }
 
-/* Video Grid */
+/* Video Grid Styles */
 #video-list {
   display: flex;
   flex-wrap: wrap;
