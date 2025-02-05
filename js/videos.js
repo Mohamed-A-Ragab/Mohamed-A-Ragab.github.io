@@ -1,5 +1,5 @@
-const apiKey = 'YOUR_YOUTUBE_API_KEY';  // Replace with your actual API key
-const channelId = 'YOUR_YOUTUBE_CHANNEL_ID';  // Replace with your actual channel ID
+const apiKey = 'AIzaSyB8pIlLQ57AHqDF4yyYsl99squEpO11Xq4';  // Replace with your actual API key
+const channelId = 'UC3NkYoeMjGkyPjk46TJFzHA';  // Replace with your actual channel ID
 const maxResults = 10;  // Adjust as needed
 const videoContainer = document.getElementById('video-list');
 
