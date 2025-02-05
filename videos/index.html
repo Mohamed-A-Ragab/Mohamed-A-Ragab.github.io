@@ -12,12 +12,14 @@
   <link rel="canonical" href="https://mohamed-a-ragab.github.io/videos/" />
   <link rel="icon" type="image/x-icon" href="../img/favicon.png">
   <title>Videos - Mohamed Ragab</title>
-  <!-- Link to the videos page CSS -->
+  <!-- Link to the main site CSS for consistent styling -->
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Link to video-specific CSS overrides -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dark-theme">
   <div class="container">
-    <!-- Header (matches main page) -->
+    <!-- Header (replicates your main page header) -->
     <header class="header">
       <span class="header__inner">
         <a href="https://mohamed-a-ragab.github.io/" style="text-decoration: none;">
@@ -55,12 +57,16 @@
     <div class="content">
       <main aria-role="main">
         <h1>My YouTube Videos</h1>
-        <!-- This container will hold the video cards injected via JavaScript -->
+        <!-- (Optional) Featured video: replace YOUR_FEATURED_VIDEO_ID with an actual video ID -->
+        <div class="featured-video">
+          <iframe src="https://www.youtube.com/embed/YOUR_FEATURED_VIDEO_ID" allowfullscreen></iframe>
+        </div>
+        <!-- Video grid container: videos will be injected here by js.js -->
         <div id="video-list"></div>
       </main>
     </div>
 
-    <!-- Footer (matches main page) -->
+    <!-- Footer (replicates your main page footer) -->
     <footer class="footer">
       <div class="footer__inner">
         <div class="footer__content">
