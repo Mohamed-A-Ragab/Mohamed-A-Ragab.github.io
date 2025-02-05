@@ -14,7 +14,7 @@ async function fetchVideos() {
                     const videoElement = document.createElement('div');
                     videoElement.classList.add('video');
                     videoElement.innerHTML = `
-                        <iframe width="360" height="215" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/${item.id.videoId}" allowfullscreen></iframe>
                         <p>${item.snippet.title}</p>
                     `;
                     videoContainer.appendChild(videoElement);
