@@ -2,77 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Mohamed Ragab">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Videos - Mohamed Ragab</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="dark-theme">
     <div class="container">
         <header class="header">
             <span class="header__inner">
-                <a href="https://mohamed-a-ragab.github.io/" style="text-decoration: none;">
+                <a href="../" style="text-decoration: none;">
                     <div class="logo">
-                        <span class="logoicon"><img src="img/100logo.png"></span>
+                        <span class="logoicon"><img src="../img/100logo.png"></span>
                         <span class="logo__mark">></span>
-                        <span class="logo__text">Videos</span>
+                        <span class="logo__text">Hello..</span>
                         <span class="logo__cursor"></span>
                     </div>
                 </a>
+
                 <span class="header__right">
                     <nav class="menu">
                         <ul class="menu__inner">
-                            <li><a href="https://mohamed-a-ragab.github.io/about/">About</a></li>
-                            <li><a href="https://mohamed-a-ragab.github.io/blog/">Blog</a></li>
-                            <li><a href="https://mohamed-a-ragab.github.io/videos/">Videos</a></li>
+                            <li><a href="../about/">About</a></li>
+                            <li><a href="../blog/">Blog</a></li>
+                            <li><a href="../videos/videos.html">Videos</a></li>  <!-- New link added -->
                         </ul>
                     </nav>
                 </span>
             </span>
         </header>
+
         <div class="content">
             <main aria-role="main">
                 <h1>My YouTube Videos</h1>
-                <div id="video-container"></div>
+                <div id="video-list"></div>
             </main>
         </div>
+
         <footer class="footer">
             <div class="footer__inner">
                 <div class="footer__content">
-                    <span>&copy; 2022</span>
-                    <span><a href="https://mohamed-a-ragab.github.io/">Mohamed Ragab</a></span>
-                </div>
-            </div>
-            <div class="footer__inner">
-                <div class="footer__content">
-                    <span>Powered by <a href="https://github.com">GitHub</a></span>
+                    <span>&copy; 2024 Mohamed Ragab</span>
                 </div>
             </div>
         </footer>
     </div>
-    <script>
-        const apiKey = 'YOUR_YOUTUBE_API_KEY';
-        const channelId = 'YOUR_YOUTUBE_CHANNEL_ID';
-        const maxResults = 6;
-        async function fetchVideos() {
-            const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`;
-            const response = await fetch(url);
-            const data = await response.json();
-            let videoContainer = document.getElementById("video-container");
-            videoContainer.innerHTML = '';
-            data.items.forEach(item => {
-                if (item.id.videoId) {
-                    let videoEmbed = `
-                        <div class="video">
-                            <iframe width="320" height="180" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
-                            <p>${item.snippet.title}</p>
-                        </div>
-                    `;
-                    videoContainer.innerHTML += videoEmbed;
-                }
-            });
-        }
-        fetchVideos();
-    </script>
+
+    <script src="videos.js"></script>  <!-- Load the JavaScript file -->
 </body>
 </html>
