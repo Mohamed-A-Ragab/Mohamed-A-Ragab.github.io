@@ -1,6 +1,6 @@
-const apiKey = 'AIzaSyB8pIlLQ57AHqDF4yyYsl99squEpO11Xq4';  // Replace with your actual API key
-const channelId = 'UC3NkYoeMjGkyPjk46TJFzHA';  // Replace with your actual channel ID
-const maxResults = 10;  // Adjust as needed
+const apiKey = 'AIzaSyB8pIlLQ57AHqDF4yyYsl99squEpO11Xq4';  // Your YouTube API Key
+const channelId = 'UC3NkYoeMjGkyPjk46TJFzHA';  // Your YouTube Channel ID
+const maxResults = 10;  // Number of videos to display
 const videoContainer = document.getElementById('video-list');
 
 async function fetchVideos() {
@@ -26,4 +26,5 @@ async function fetchVideos() {
     }
 }
 
+// Fetch videos when the page loads
 fetchVideos();
