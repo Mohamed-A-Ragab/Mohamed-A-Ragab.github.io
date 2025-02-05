@@ -1,42 +1,39 @@
-/* Container & Layout (you can also include your site-wide styles here) */
+/* --- Global / Dark Theme Styles for Videos Page --- */
+body.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
+  background-color: #121212;
+  color: #e0e0e0;
+  min-height: 100vh;
+  padding: 0 20px;
 }
 
-/* Header, Footer, and general typography can be inherited from your main site styles */
+/* --- Header & Footer --- */
+/* (Assuming your main page CSS defines these; adjust if necessary) */
 
-/* Featured Video Styling */
-.featured-video {
-  margin: 20px auto;
-  text-align: center;
-}
-.featured-video iframe {
-  width: 80%;
-  max-width: 640px;
-  height: 360px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Video List Grid */
+/* --- Video Grid Styling --- */
 #video-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 20px;
+  padding: 20px 0;
 }
 
-/* Individual Video Item Styling */
+/* Individual Video Card */
 .video {
   width: 360px;
   background-color: #222;
   color: #fff;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  transition: transform 0.2s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
 }
 .video:hover {
   transform: translateY(-5px);
@@ -53,3 +50,7 @@
   font-weight: bold;
   text-align: center;
 }
+
+/* --- Logo & Header Adjustments --- */
+/* Ensure that your logo, header text, and spacing match your main page design. */
+/* If you have additional header styles in your main CSS, replicate them here if needed. */
