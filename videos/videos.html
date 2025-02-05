@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Metadata (matches your homepage) -->
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Mohamed Ragab">
-    <meta name="description" content="Mohamed Ragab's YouTube Videos">
-    <link rel="icon" type="image/x-icon" href="../img/favicon.png">
-    <link rel="stylesheet" href="../css/style.css"> <!-- Your existing CSS -->
     <title>Videos - Mohamed Ragab</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dark-theme">
     <div class="container">
-        <!-- Header (same as homepage) -->
         <header class="header">
             <span class="header__inner">
                 <a href="https://mohamed-a-ragab.github.io/" style="text-decoration: none;">
                     <div class="logo">
-                        <span class="logoicon"><img src="../img/100logo.png" alt="Logo"></span>
+                        <span class="logoicon"><img src="img/100logo.png"></span>
                         <span class="logo__mark">></span>
                         <span class="logo__text">Videos</span>
                         <span class="logo__cursor"></span>
@@ -32,30 +27,15 @@
                             <li><a href="https://mohamed-a-ragab.github.io/videos/">Videos</a></li>
                         </ul>
                     </nav>
-                    <!-- Theme Toggle (matches your existing code) -->
-                    <span class="theme-toggle unselectable">
-                        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="https://www.w3.org/2000/svg">
-                            <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22 3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
-                        </svg>
-                    </span>
                 </span>
             </span>
         </header>
-
-        <!-- Main Content -->
         <div class="content">
             <main aria-role="main">
                 <h1>My YouTube Videos</h1>
-                <p>Explore my latest uploads! 🎥</p>
-
-                <!-- Video Grid (populated dynamically by JavaScript) -->
-                <div id="video-grid" class="video-grid">
-                    <!-- Videos will be inserted here -->
-                </div>
+                <div id="video-container"></div>
             </main>
         </div>
-
-        <!-- Footer (same as homepage) -->
         <footer class="footer">
             <div class="footer__inner">
                 <div class="footer__content">
@@ -70,8 +50,29 @@
             </div>
         </footer>
     </div>
-
-    <!-- JavaScript for Videos Page -->
-    <script src="../js/videos.js"></script>
+    <script>
+        const apiKey = 'YOUR_YOUTUBE_API_KEY';
+        const channelId = 'YOUR_YOUTUBE_CHANNEL_ID';
+        const maxResults = 6;
+        async function fetchVideos() {
+            const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`;
+            const response = await fetch(url);
+            const data = await response.json();
+            let videoContainer = document.getElementById("video-container");
+            videoContainer.innerHTML = '';
+            data.items.forEach(item => {
+                if (item.id.videoId) {
+                    let videoEmbed = `
+                        <div class="video">
+                            <iframe width="320" height="180" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
+                            <p>${item.snippet.title}</p>
+                        </div>
+                    `;
+                    videoContainer.innerHTML += videoEmbed;
+                }
+            });
+        }
+        fetchVideos();
+    </script>
 </body>
 </html>
