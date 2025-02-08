@@ -4,19 +4,15 @@ body.dark-theme {
   color: #a9a9b3 !important;
 }
 
-/* Container (to match blog page layout) */
+/* Container (to match the global layout of your site) */
 .container {
-  flex: 1 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin: 0 auto;
   max-width: 760px;
+  margin: 0 auto;
   padding: 0 20px;
+  text-align: center;
 }
 
-/* Featured Video */
+/* Featured Video Styling */
 .featured-video {
   margin: 20px 0;
 }
@@ -29,18 +25,16 @@ body.dark-theme {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Video Grid */
+/* Video Grid Styling */
 #video-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
   padding: 20px 0;
 }
 
-/* Individual Video Card */
+/* Individual Video Card Styling */
 .video {
-  width: 360px;
   background-color: #222;
   padding: 10px;
   border-radius: 10px;
@@ -60,6 +54,6 @@ body.dark-theme {
   margin-top: 10px;
   font-size: 1rem;
   font-weight: bold;
-  text-align: center;
   color: #fff;
+  text-align: center;
 }
