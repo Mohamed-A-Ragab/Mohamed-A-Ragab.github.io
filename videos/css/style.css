@@ -1,10 +1,12 @@
-/* Dark mode overrides */
+/* Video Page–Specific Styles */
+
+/* Dark mode overrides for the video page */
 body.dark-theme {
   background-color: #292a2d !important;
   color: #a9a9b3 !important;
 }
 
-/* Container styling to match global layout */
+/* Ensure the container matches the global layout */
 .container {
   max-width: 760px;
   margin: 0 auto;
