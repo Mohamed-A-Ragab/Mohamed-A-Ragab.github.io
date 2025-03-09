@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mohamed Ragab">
     <title>I Wanna Be Thy Copy - Play Online</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="iwbtc-all.js"></script>
+    <script src="iwbtc-all.js" defer></script>
 </head>
-<body>
+<body class="dark-theme">
     <div class="container">
         <header class="header">
             <span class="header__inner">
                 <a href="/" class="logo">
                     <span class="logoicon"><img src="../img/100logo.png"></span>
                     <span class="logo__mark">></span>
-                    <span class="logo__text">Game Time</span>
+                    <span class="logo__text">Hello..</span>
                     <span class="logo__cursor"></span>
                 </a>
                 <nav class="menu">
@@ -28,43 +29,54 @@
             </span>
         </header>
         
-        <main>
+        <main class="content">
             <h1>I Wanna Be Thy Copy</h1>
             <h3>Thy Copy : Thy Game</h3>
-            <div>
-                <span class="link_like" id="reset_save">Back to level 1 & delete save</span>
-                <span class="link_like" id="mute_button">Mute (key: <code>M</code>)</span>
+            <div style="text-align: left; float: left; margin-left: 100px">
+                <span class="link_like" id="reset_save">Back to level 1 &amp; delete save</span>
             </div>
-            <canvas id="canvas">
-                <p>Your browser doesn't support canvas.</p>
-            </canvas>
+            <div style="text-align: right; margin-right: 100px;">
+                <span class="link_like" id="mute_button">mute (key: <code>M</code>)</span>
+            </div>
+            <center>
+                <canvas id="canvas">
+                    <p>Your browser doesn't support canvas.</p>
+                </canvas>
+            </center>
             <noscript>Your browser needs JavaScript to run this game.</noscript>
             <hr>
             <pre id="debug"></pre>
             <pre id="warn"></pre>
+            <p>Default keys (click to change):</p>
             <div id="keys">
                 <table>
-                    <tr>
-                        <td><span class="link_like" id="change_left">Left Arrow - Move left</span></td>
+                    <tr><td><span class="link_like" id="change_left">Left Arrow - Move left</span></td>
                         <td><span class="link_like" id="change_jump">Space - Jump</span></td>
                         <td><span class="link_like" id="change_restart">R - Restart</span></td>
                     </tr>
-                    <tr>
-                        <td><span class="link_like" id="change_right">Right Arrow - Move right</span></td>
+                    <tr><td><span class="link_like" id="change_right">Right Arrow - Move right</span></td>
                         <td><span class="link_like" id="change_shoot">T - Shoot</span></td>
                         <td><span class="link_like" id="change_mute">M - Mute sound</span></td>
                     </tr>
                 </table>
             </div>
             <br>
+            <div id="press_key_msg" style="display: none">Press key to change, or escape to abort.</div>
             <span class="link_like" id="reset_keys">Click here to reset keys</span>
             <br><br>
-            <p>IWBTG was originally created by <a href="http://kayin.pyoko.org/">Kayin</a>. Source code available on <a href="https://github.com/copy/iwbtc">GitHub</a>.</p>
+            <p>IWBTG was originally created by <a href="http://kayin.pyoko.org/">Kayin</a>, who shall be worshipped for creating <a href="http://kayin.pyoko.org/iwbtg/">the best game ever</a>. Also props to Ellipsis and sam136 from the IWBTG forum for ripping the music and images from the original game.</p>
+            <br>
+            <p>Source code available on <a href="https://github.com/copy/iwbtc">GitHub</a>.</p>
         </main>
         
         <footer class="footer">
             <div class="footer__inner">
-                <span>&copy; 2022 <a href="/">Mohamed Ragab</a></span>
+                <div class="footer__content">
+                    <span>&copy; 2022 <a href="/">Mohamed Ragab</a></span>
+                </div>
+                <div class="footer__content">
+                    <span>Powered by <a href="https://github.com">GitHub</a></span>
+                </div>
             </div>
         </footer>
     </div>
