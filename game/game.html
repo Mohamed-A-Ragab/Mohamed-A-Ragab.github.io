@@ -30,43 +30,23 @@
         </header>
         
         <main class="content">
-            <h1>I Wanna Be Thy Copy</h1>
-            <h3>Thy Copy : Thy Game</h3>
-            <div style="text-align: left; float: left; margin-left: 100px">
-                <span class="link_like" id="reset_save">Back to level 1 &amp; delete save</span>
-            </div>
-            <div style="text-align: right; margin-right: 100px;">
-                <span class="link_like" id="mute_button">mute (key: <code>M</code>)</span>
-            </div>
-            <center>
-                <canvas id="canvas">
-                    <p>Your browser doesn't support canvas.</p>
-                </canvas>
-            </center>
-            <noscript>Your browser needs JavaScript to run this game.</noscript>
-            <hr>
-            <pre id="debug"></pre>
-            <pre id="warn"></pre>
-            <p>Default keys (click to change):</p>
-            <div id="keys">
-                <table>
-                    <tr><td><span class="link_like" id="change_left">Left Arrow - Move left</span></td>
-                        <td><span class="link_like" id="change_jump">Space - Jump</span></td>
-                        <td><span class="link_like" id="change_restart">R - Restart</span></td>
-                    </tr>
-                    <tr><td><span class="link_like" id="change_right">Right Arrow - Move right</span></td>
-                        <td><span class="link_like" id="change_shoot">T - Shoot</span></td>
-                        <td><span class="link_like" id="change_mute">M - Mute sound</span></td>
-                    </tr>
-                </table>
-            </div>
-            <br>
-            <div id="press_key_msg" style="display: none">Press key to change, or escape to abort.</div>
-            <span class="link_like" id="reset_keys">Click here to reset keys</span>
-            <br><br>
-            <p>IWBTG was originally created by <a href="http://kayin.pyoko.org/">Kayin</a>, who shall be worshipped for creating <a href="http://kayin.pyoko.org/iwbtg/">the best game ever</a>. Also props to Ellipsis and sam136 from the IWBTG forum for ripping the music and images from the original game.</p>
-            <br>
-            <p>Source code available on <a href="https://github.com/copy/iwbtc">GitHub</a>.</p>
+            <meta name="viewport" content="width=device-width,user-scalable=no">
+
+<div id="container">
+	<div id="game"></div>
+	<div id="score">0</div>
+	<div id="instructions">Click (or press the spacebar) to place the block</div>
+	<div class="game-over">
+		<h2>Game Over</h2>
+		<p>You did great, you're the best.</p>
+		<p>Click or spacebar to start again</p>
+	</div>
+	<div class="game-ready">
+		<div id="start-button">Start</div>
+		<div></div>
+	</div>
+</div>
+
         </main>
         
         <footer class="footer">
