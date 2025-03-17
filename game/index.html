@@ -22,15 +22,11 @@
         body {
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background: #111; /* Dark theme background */
+            background: #111; /* Dark theme */
+            font-family: Arial, sans-serif;
         }
 
-        /* Fix Navigation */
+        /* Navbar Styles */
         .header {
             width: 100%;
             position: fixed;
@@ -43,24 +39,30 @@
             justify-content: center;
         }
 
-        /* Game container fix */
-        #container {
-            position: relative;
-            margin-top: 100px; /* Push below navbar */
-            text-align: center;
-            width: 100%;
-            max-width: 600px; /* Centered on big screens */
+        /* Container for the game */
+        .game-container {
+            margin-top: 100px; /* Push it below the header */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 100px); /* Adjust height */
         }
 
-        /* Game canvas area */
+        /* Game area */
+        #container {
+            width: 100%;
+            max-width: 600px; /* Centered */
+            text-align: center;
+        }
+
+        /* Game canvas */
         #game {
             width: 100%;
             height: 500px;
-            margin: auto;
-            background: #222; /* Darker game background */
+            background: #222;
         }
 
-        /* Score display */
+        /* Score Display */
         #score {
             color: white;
             font-size: 24px;
@@ -69,21 +71,10 @@
 
         /* Start Button Fix */
         .game-ready {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-radius: 10px;
             text-align: center;
-            z-index: 10;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            margin-top: 20px;
         }
 
-        /* Make Start Button More Visible */
         #start-button {
             cursor: pointer;
             background: #ffcc00;
@@ -93,15 +84,11 @@
             border: none;
             color: black;
             font-weight: bold;
+            display: inline-block;
         }
 
         #start-button:hover {
             background: #ff9900;
-        }
-
-        /* Hide Start Screen After Clicking */
-        .game-started .game-ready {
-            display: none;
         }
     </style>
 </head>
@@ -133,22 +120,24 @@
         </span>
     </header>
 
-    <!-- Game Container -->
-    <div id="container">
-        <div id="game"></div>
-        <div id="score">0</div>
-        <div id="instructions">Click (or press the spacebar) to place the block</div>
+    <!-- Game Section -->
+    <div class="game-container">
+        <div id="container">
+            <div id="game"></div>
+            <div id="score">0</div>
+            <div id="instructions">Click (or press the spacebar) to place the block</div>
 
-        <!-- Start Game Screen -->
-        <div class="game-ready">
-            <div id="start-button">Start Game</div>
-        </div>
+            <!-- Start Game Screen -->
+            <div class="game-ready">
+                <div id="start-button">Start Game</div>
+            </div>
 
-        <!-- Game Over Screen -->
-        <div class="game-over">
-            <h2>Game Over</h2>
-            <p>You did great, you're the best.</p>
-            <p>Click or spacebar to start again</p>
+            <!-- Game Over Screen -->
+            <div class="game-over">
+                <h2>Game Over</h2>
+                <p>You did great, you're the best.</p>
+                <p>Click or spacebar to start again</p>
+            </div>
         </div>
     </div>
 
