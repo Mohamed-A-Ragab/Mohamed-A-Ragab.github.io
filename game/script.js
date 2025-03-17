@@ -304,3 +304,11 @@ document.addEventListener("DOMContentLoaded", function () {
         container.classList.add("game-started"); // Hides the start button
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const startButton = document.getElementById("start-button");
+    const container = document.getElementById("container");
+
+    startButton.addEventListener("click", function () {
+        container.classList.add("game-started"); // Hide Start Screen
+    });
+});
