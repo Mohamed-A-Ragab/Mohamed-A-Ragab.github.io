@@ -132,3 +132,45 @@ html, body {
 .game-started .game-ready {
     display: none;
 }
+/* Fix game container to fit below the navbar */
+#container {
+    position: relative;
+    top: 100px; /* Push down below the navbar */
+    text-align: center;
+}
+
+/* Center the game inside the page */
+#game {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Fix Start Button */
+.game-ready {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10;
+}
+
+#start-button {
+    cursor: pointer;
+    background: #ffcc00;
+    padding: 15px 25px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#start-button:hover {
+    background: #ff9900;
+}
+
+/* Hide Start Screen After Clicking */
+.game-started .game-ready {
+    display: none;
+}
