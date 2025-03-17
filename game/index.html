@@ -2,92 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Mohamed Ragab">
-    <meta name="description" content="Mohamed Ragab Personal Website." />
-    <link rel="canonical" href="https://mohamed-a-ragab.github.io/" />
+    <meta name="description" content="Mohamed Ragab Personal Website.">
+    <link rel="canonical" href="https://mohamed-a-ragab.github.io/">
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
 
-    <title> Mohamed Ragab | Tower Blocks </title>
+    <title>Mohamed Ragab | Tower Blocks</title>
 
-    <!-- Website Styles -->
+    <!-- Your website styles -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Game Styles -->
+    <!-- Game styles -->
     <link rel="stylesheet" href="./style.css">
-    
-    <style>
-        /* ✅ General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        /* ✅ Body */
+    <style>
+        /* Fix layout */
         body {
-            background: #111;
-            font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            background: #111;
             color: white;
         }
 
-        /* ✅ Header */
-        .header {
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background: rgba(0, 0, 0, 0.9);
-            padding: 15px 0;
-            text-align: center;
-            z-index: 1000;
-        }
-
-        /* ✅ Game Wrapper */
-        .game-wrapper {
+        /* Fix game position */
+        .game-container {
             width: 100%;
             max-width: 600px;
-            margin-top: 80px; /* Push below header */
+            margin-top: 100px; /* Push below header */
             text-align: center;
         }
 
-        /* ✅ Game Container */
+        /* Ensure game fits */
         #container {
             width: 100%;
             background: #222;
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
-            margin: auto;
-        }
-
-        /* ✅ Game Area */
-        #game {
-            width: 100%;
-            height: 500px;
-            background: #444;
-        }
-
-        /* ✅ Start Button */
-        #start-button {
-            cursor: pointer;
-            background: #ffcc00;
-            padding: 15px 30px;
-            font-size: 20px;
-            border-radius: 5px;
-            color: black;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 20px;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- ✅ Navigation Bar -->
+    <!-- ✅ Your Original Header -->
     <header class="header">
         <a href="https://mohamed-a-ragab.github.io/" style="text-decoration: none;">
             <div class="logo">
@@ -108,8 +68,8 @@
         </nav>
     </header>
 
-    <!-- ✅ Game Section -->
-    <div class="game-wrapper">
+    <!-- ✅ Fixed Game Position -->
+    <div class="game-container">
         <div id="container">
             <div id="game"></div>
             <div id="score">0</div>
