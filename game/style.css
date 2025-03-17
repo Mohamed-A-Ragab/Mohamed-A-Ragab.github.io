@@ -104,3 +104,31 @@ html, body {
 #container.ended .game-over p {
   transition-delay: 0.3s;
 }
+.game-ready {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10; /* Ensures it's above the game */
+}
+
+#start-button {
+    cursor: pointer;
+    background: #ffcc00;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#start-button:hover {
+    background: #ff9900;
+}
+
+/* Hide start screen when game starts */
+.game-started .game-ready {
+    display: none;
+}
