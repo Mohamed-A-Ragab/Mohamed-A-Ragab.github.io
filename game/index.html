@@ -6,67 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Mohamed Ragab">
     <meta name="description" content="Mohamed Ragab Personal Website." />
-    <meta name="keywords" content="" />
-    <meta name="robots" content="" />
-    <meta name="theme-color" content="" />
     <link rel="canonical" href="https://mohamed-a-ragab.github.io/" />
-    <link rel="icon" type="image/x-icon" href="../img/favicon.png">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
 
-    <title>Tower Blocks - Mohamed Ragab</title>
+    <title> Mohamed Ragab | Tower Blocks </title>
 
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="./style.css"> <!-- Game Styles -->
+    <!-- Main Website Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Game Styles -->
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body class="dark-theme">
 
-    <!-- Header Section -->
+    <!-- Navigation Bar -->
     <header class="header">
-        <div class="container">
+        <span class="header__inner">
             <a href="https://mohamed-a-ragab.github.io/" style="text-decoration: none;">
                 <div class="logo">
-                    <span class="logoicon"><img src="../img/100logo.png"></span>
+                    <span class="logoicon"><img src="img/100logo.png"></span>
                     <span class="logo__mark">></span>
                     <span class="logo__text">Hello..</span>
                     <span class="logo__cursor"></span>
                 </div>
             </a>
 
-            <nav class="menu">
-                <ul class="menu__inner">
-                    <li><a href="https://mohamed-a-ragab.github.io/about/">About</a></li>
-                    <li><a href="https://mohamed-a-ragab.github.io/blog/">Blog</a></li>
-                    <li><a href="https://mohamed-a-ragab.github.io/videos/">Videos</a></li>
-                    <li><a href="https://mohamed-a-ragab.github.io/game/">Game</a></li>
-                </ul>
-            </nav>
-        </div>
+            <span class="header__right">
+                <nav class="menu">
+                    <ul class="menu__inner">
+                        <li><a href="https://mohamed-a-ragab.github.io/about/">About</a></li>
+                        <li><a href="https://mohamed-a-ragab.github.io/blog/">Blog</a></li>
+                        <li><a href="https://mohamed-a-ragab.github.io/videos/">Videos</a></li>
+                        <li><a href="https://mohamed-a-ragab.github.io/game/">Game</a></li>
+                    </ul>
+                </nav>
+            </span>
+        </span>
     </header>
 
-    <!-- Game Section -->
-    <main>
-        <meta name="viewport" content="width=device-width,user-scalable=no">
+    <!-- Game Container -->
+    <div id="container">
+        <div id="game"></div>
+        <div id="score">0</div>
+        <div id="instructions">Click (or press the spacebar) to place the block</div>
 
-        <div id="container">
-            <div id="game"></div>
-            <div id="score">0</div>
-            <div id="instructions">Click (or press the spacebar) to place the block</div>
-            <div class="game-over">
-                <h2>Game Over</h2>
-                <p>You did great, you're the best.</p>
-                <p>Click or spacebar to start again</p>
-            </div>
-            <div class="game-ready">
-                <div id="start-button">Start</div>
-            </div>
+        <!-- Start Game Screen -->
+        <div class="game-ready">
+            <div id="start-button">Start Game</div>
         </div>
-    </main>
+
+        <!-- Game Over Screen -->
+        <div class="game-over">
+            <h2>Game Over</h2>
+            <p>You did great, you're the best.</p>
+            <p>Click or spacebar to start again</p>
+        </div>
+    </div>
 
     <!-- Scripts -->
-    <script src="https://codepen.io/ste-vg/pen/zBVaZw.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js'></script>
     <script src="./script.js"></script>
-
 </body>
 </html>
