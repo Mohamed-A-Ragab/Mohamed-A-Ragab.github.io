@@ -296,3 +296,11 @@ class Game {
     }
 }
 let game = new Game();
+document.addEventListener("DOMContentLoaded", function () {
+    const startButton = document.getElementById("start-button");
+    const container = document.getElementById("container");
+
+    startButton.addEventListener("click", function () {
+        container.classList.add("game-started"); // Hides the start button
+    });
+});
