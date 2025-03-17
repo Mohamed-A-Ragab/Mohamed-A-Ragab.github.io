@@ -17,18 +17,24 @@
     <link rel="stylesheet" href="./style.css">
     
     <style>
-        /* ✅ Reset Body */
-        body {
+        /* ✅ General Reset */
+        * {
             margin: 0;
             padding: 0;
-            background: #111; /* Dark theme */
+            box-sizing: border-box;
+        }
+
+        /* ✅ Body */
+        body {
+            background: #111;
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
+            color: white;
         }
 
-        /* ✅ Header (Navigation Bar) */
+        /* ✅ Header */
         .header {
             width: 100%;
             position: fixed;
@@ -40,18 +46,17 @@
             z-index: 1000;
         }
 
-        /* ✅ Push content below header */
+        /* ✅ Game Wrapper */
         .game-wrapper {
             width: 100%;
-            max-width: 800px; /* Adjust as needed */
-            margin-top: 100px; /* Space below header */
+            max-width: 600px;
+            margin-top: 80px; /* Push below header */
             text-align: center;
         }
 
         /* ✅ Game Container */
         #container {
             width: 100%;
-            max-width: 600px;
             background: #222;
             padding: 20px;
             border-radius: 10px;
@@ -72,15 +77,10 @@
             padding: 15px 30px;
             font-size: 20px;
             border-radius: 5px;
-            border: none;
             color: black;
             font-weight: bold;
             display: inline-block;
             margin-top: 20px;
-        }
-
-        #start-button:hover {
-            background: #ff9900;
         }
     </style>
 </head>
@@ -133,13 +133,5 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js'></script>
     <script src="./script.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const startButton = document.getElementById("start-button");
-            startButton.addEventListener("click", function () {
-                document.getElementById("container").classList.add("game-started");
-            });
-        });
-    </script>
 </body>
 </html>
