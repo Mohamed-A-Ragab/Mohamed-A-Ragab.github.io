@@ -11,14 +11,13 @@
 
     <title> Mohamed Ragab | Tower Blocks </title>
 
-    <!-- Main Website Styles -->
+    <!-- Website Styles -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Game Styles -->
     <link rel="stylesheet" href="./style.css">
+    
     <style>
-        /* 🛠 Fix Everything in One Place */
-
-        /* Ensure body takes full height */
+        /* Reset Body */
         body {
             margin: 0;
             padding: 0;
@@ -26,7 +25,7 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Navbar Styles */
+        /* ✅ Header (Navigation Bar) */
         .header {
             width: 100%;
             position: fixed;
@@ -34,32 +33,34 @@
             left: 0;
             background: rgba(0, 0, 0, 0.9);
             padding: 15px 0;
-            z-index: 100;
-            display: flex;
-            justify-content: center;
-        }
-
-        /* Container for the game */
-        .game-container {
-            margin-top: 100px; /* Push it below the header */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: calc(100vh - 100px); /* Adjust height */
-        }
-
-        /* Game area */
-        #container {
-            width: 100%;
-            max-width: 600px; /* Centered */
+            z-index: 1000;
             text-align: center;
         }
 
-        /* Game canvas */
+        /* ✅ Game Section (Properly Centered) */
+        .game-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height */
+            padding-top: 80px; /* Push below header */
+        }
+
+        /* ✅ Game Box */
+        #container {
+            width: 100%;
+            max-width: 600px; /* Game max size */
+            text-align: center;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Game Area */
         #game {
             width: 100%;
             height: 500px;
-            background: #222;
+            background: #444;
         }
 
         /* Score Display */
@@ -69,16 +70,15 @@
             margin-top: 10px;
         }
 
-        /* Start Button Fix */
+        /* Start Button */
         .game-ready {
-            text-align: center;
             margin-top: 20px;
         }
 
         #start-button {
             cursor: pointer;
             background: #ffcc00;
-            padding: 15px 25px;
+            padding: 15px 30px;
             font-size: 20px;
             border-radius: 5px;
             border: none;
@@ -95,32 +95,28 @@
 
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- ✅ Navigation Bar -->
     <header class="header">
-        <span class="header__inner">
-            <a href="https://mohamed-a-ragab.github.io/" style="text-decoration: none;">
-                <div class="logo">
-                    <span class="logoicon"><img src="img/100logo.png"></span>
-                    <span class="logo__mark">></span>
-                    <span class="logo__text">Hello..</span>
-                    <span class="logo__cursor"></span>
-                </div>
-            </a>
+        <a href="https://mohamed-a-ragab.github.io/" style="text-decoration: none;">
+            <div class="logo">
+                <span class="logoicon"><img src="img/100logo.png"></span>
+                <span class="logo__mark">></span>
+                <span class="logo__text">Hello..</span>
+                <span class="logo__cursor"></span>
+            </div>
+        </a>
 
-            <span class="header__right">
-                <nav class="menu">
-                    <ul class="menu__inner">
-                        <li><a href="https://mohamed-a-ragab.github.io/about/">About</a></li>
-                        <li><a href="https://mohamed-a-ragab.github.io/blog/">Blog</a></li>
-                        <li><a href="https://mohamed-a-ragab.github.io/videos/">Videos</a></li>
-                        <li><a href="https://mohamed-a-ragab.github.io/game/">Game</a></li>
-                    </ul>
-                </nav>
-            </span>
-        </span>
+        <nav class="menu">
+            <ul class="menu__inner">
+                <li><a href="https://mohamed-a-ragab.github.io/about/">About</a></li>
+                <li><a href="https://mohamed-a-ragab.github.io/blog/">Blog</a></li>
+                <li><a href="https://mohamed-a-ragab.github.io/videos/">Videos</a></li>
+                <li><a href="https://mohamed-a-ragab.github.io/game/">Game</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Game Section -->
+    <!-- ✅ Game Section -->
     <div class="game-container">
         <div id="container">
             <div id="game"></div>
@@ -141,7 +137,7 @@
         </div>
     </div>
 
-    <!-- Scripts -->
+    <!-- ✅ Scripts -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js'></script>
     <script src="./script.js"></script>
